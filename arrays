@@ -1,0 +1,22 @@
+@@Merging two unsorted arrays in sorted order@@
+void sortedMerge(vector<int>& arr1, vector<int>& arr2, vector<int>& res) {
+        // Your code goes here
+        int len = arr1.size()+arr2.size();
+        int m = arr1.size(),n=arr2.size();
+        int i=0,j=0,k=0;
+        while(k<len){
+            if(i==m || j==n){
+                if(i==m){
+                    res.push_back(arr2[j]);
+                    j++;
+                }
+                else{
+                    res.push_back(arr1[j]);
+                    i++;
+                }
+            }
+        }
+    }
+
+
+    
